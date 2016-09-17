@@ -11,8 +11,9 @@
     <AssemblyName>fvexpress</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -72,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aboutForm.Designer.vb">
+      <DependentUpon>aboutForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aboutForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +101,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="optionsForm.Designer.vb">
+      <DependentUpon>optionsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="optionsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registerForm.Designer.vb">
+      <DependentUpon>registerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="registerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateForm.Designer.vb">
+      <DependentUpon>updateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mainForm.resx">
@@ -104,6 +129,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="optionsForm.resx">
+      <DependentUpon>optionsForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +145,26 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\fvexpress.register\fvexpress.register.vbproj">
+      <Project>{499155d7-34f4-4529-be1f-a527e33105e4}</Project>
+      <Name>fvexpress.register</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\fvexpress.settings\fvexpress.settings.vbproj">
+      <Project>{da59a2cb-c5fb-4dcf-9bd4-ebbfc78ea346}</Project>
+      <Name>fvexpress.settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\fvexpress.update\fvexpress.update.vbproj">
+      <Project>{a9848d0e-90da-4b6c-9d3d-dd51a7e85d88}</Project>
+      <Name>fvexpress.update</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ice1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
