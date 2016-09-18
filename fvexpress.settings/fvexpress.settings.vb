@@ -4,6 +4,7 @@ Imports System.IO.StreamWriter
 Public Class fvexpress
     Public Shared AutoUpdate As String
     Public Shared Status As String
+    Public Shared Buffer As String
     Shared Function LoadSettings(ByVal SettingFilePath As String)
         Status = True
         Dim LoadSettingHandler As StreamReader = New StreamReader(Directory.GetCurrentDirectory + "\Config\Config.cfg")

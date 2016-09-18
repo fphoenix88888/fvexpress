@@ -23,4 +23,8 @@ Public Class optionsForm
         End Try
     End Sub
 
+    Private Sub optionsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Buffer = "產品版本：" + My.Application.Info.Version.ToString
+        txtInfo.Text = Buffer
+    End Sub
 End Class

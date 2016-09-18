@@ -26,6 +26,9 @@ Public Class mainForm
             Else
                 mnuitemRegisterNow.Visible = True
                 Me.Text = My.Application.Info.ProductName + "(未註冊版本)"
+                fvexpress.aboutForm.lblRegName.Text = "未註冊版本"
+                fvexpress.aboutForm.lblRegOrg.Text = Nothing
+                fvexpress.aboutForm.lblRegEmail.Text = Nothing
             End If
 
             'Load all the settings
@@ -54,7 +57,7 @@ Public Class mainForm
                 My.Computer.FileSystem.WriteAllText(Directory.GetCurrentDirectory + "\Config\Current.version", My.Application.Info.Version.ToString, False)
                 CheckUpdate(CurrentVersion, LatestVersion)
             End If
-            If UpdateStatus = True Then
+            If UpdateStatus = True And Not LatestVersion = Nothing Then
                 If MessageBox.Show("有新的軟體版本可供更新。您要立即更新嗎？", "有新版本", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then updateForm.ActiveForm.ShowDialog()
             End If
 
@@ -134,22 +137,34 @@ Public Class mainForm
     End Sub
 
     Private Sub mnuitemUpdate_Click(sender As Object, e As EventArgs) Handles mnuitemUpdate.Click
-
+        updateForm.ShowDialog()
     End Sub
 
     Private Sub mnuitemHelpAndContent_Click(sender As Object, e As EventArgs) Handles mnuitemHelpAndContent.Click
-
+        System.Diagnostics.Process.Start("")
     End Sub
 
     Private Sub mnuitemRegisterNow_Click(sender As Object, e As EventArgs) Handles mnuitemRegisterNow.Click
-
+        registerForm.ShowDialog()
     End Sub
 
     Private Sub mnuitemViewFile_Click(sender As Object, e As EventArgs) Handles mnuitemViewFile.Click
-
+        panelViewFile.Visible = True
     End Sub
 
     Private Sub mnuitemAbout_Click(sender As Object, e As EventArgs) Handles mnuitemAbout.Click
+        aboutForm.ShowDialog()
+    End Sub
 
+    Private Sub txtCloseView_Click(sender As Object, e As EventArgs) Handles txtCloseView.Click
+        panelViewFile.Visible = False
+    End Sub
+
+    Private Sub txtCloseView_MouseHover(sender As Object, e As EventArgs) Handles txtCloseView.MouseHover
+        statusMainStatus.Text = "關閉檢視檔案操作介面。"
+    End Sub
+
+    Private Sub txtCloseView_MouseLeave(sender As Object, e As EventArgs) Handles txtCloseView.MouseLeave
+        statusMainStatus.Text = "就緒"
     End Sub
 End Class

@@ -26,9 +26,11 @@ Partial Class optionsForm
         Me.tabGeneral = New System.Windows.Forms.TabPage()
         Me.chkAutoUpdate = New System.Windows.Forms.CheckBox()
         Me.tabVersionInfo = New System.Windows.Forms.TabPage()
+        Me.txtInfo = New System.Windows.Forms.TextBox()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.tabOptions.SuspendLayout()
         Me.tabGeneral.SuspendLayout()
+        Me.tabVersionInfo.SuspendLayout()
         Me.SuspendLayout()
         '
         'tabOptions
@@ -66,13 +68,25 @@ Partial Class optionsForm
         'tabVersionInfo
         '
         Me.tabVersionInfo.BackgroundImage = Global.fvexpress.My.Resources.Resources.Ice1
+        Me.tabVersionInfo.Controls.Add(Me.txtInfo)
         Me.tabVersionInfo.Location = New System.Drawing.Point(4, 24)
         Me.tabVersionInfo.Name = "tabVersionInfo"
         Me.tabVersionInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabVersionInfo.Size = New System.Drawing.Size(453, 310)
+        Me.tabVersionInfo.Size = New System.Drawing.Size(453, 337)
         Me.tabVersionInfo.TabIndex = 1
         Me.tabVersionInfo.Text = "版本資訊"
         Me.tabVersionInfo.UseVisualStyleBackColor = True
+        '
+        'txtInfo
+        '
+        Me.txtInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtInfo.Location = New System.Drawing.Point(3, 3)
+        Me.txtInfo.Multiline = True
+        Me.txtInfo.Name = "txtInfo"
+        Me.txtInfo.ReadOnly = True
+        Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtInfo.Size = New System.Drawing.Size(447, 331)
+        Me.txtInfo.TabIndex = 0
         '
         'btnClose
         '
@@ -106,6 +120,8 @@ Partial Class optionsForm
         Me.tabOptions.ResumeLayout(False)
         Me.tabGeneral.ResumeLayout(False)
         Me.tabGeneral.PerformLayout()
+        Me.tabVersionInfo.ResumeLayout(False)
+        Me.tabVersionInfo.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -115,4 +131,5 @@ Partial Class optionsForm
     Friend WithEvents tabVersionInfo As TabPage
     Friend WithEvents btnClose As Button
     Friend WithEvents chkAutoUpdate As CheckBox
+    Friend WithEvents txtInfo As TextBox
 End Class

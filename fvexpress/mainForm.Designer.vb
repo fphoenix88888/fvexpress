@@ -22,6 +22,7 @@ Partial Class mainForm
     '請勿使用程式碼編輯器進行修改。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(mainForm))
         Me.menuMain = New System.Windows.Forms.MenuStrip()
         Me.mnuitemFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuitemViewFile = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,8 +39,11 @@ Partial Class mainForm
         Me.statusMain = New System.Windows.Forms.StatusStrip()
         Me.statusMainStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.statusVersion = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.panelViewFile = New System.Windows.Forms.Panel()
+        Me.txtCloseView = New System.Windows.Forms.Button()
         Me.menuMain.SuspendLayout()
         Me.statusMain.SuspendLayout()
+        Me.panelViewFile.SuspendLayout()
         Me.SuspendLayout()
         '
         'menuMain
@@ -150,16 +154,44 @@ Partial Class mainForm
         Me.statusVersion.Size = New System.Drawing.Size(91, 17)
         Me.statusVersion.Text = "[StatusVersion]"
         '
+        'panelViewFile
+        '
+        Me.panelViewFile.AutoSize = True
+        Me.panelViewFile.BackgroundImage = Global.fvexpress.My.Resources.Resources.Ice1
+        Me.panelViewFile.Controls.Add(Me.txtCloseView)
+        Me.panelViewFile.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelViewFile.Location = New System.Drawing.Point(0, 24)
+        Me.panelViewFile.Name = "panelViewFile"
+        Me.panelViewFile.Size = New System.Drawing.Size(584, 365)
+        Me.panelViewFile.TabIndex = 2
+        Me.panelViewFile.Visible = False
+        '
+        'txtCloseView
+        '
+        Me.txtCloseView.AutoSize = True
+        Me.txtCloseView.BackColor = System.Drawing.Color.Transparent
+        Me.txtCloseView.BackgroundImage = Global.fvexpress.My.Resources.Resources.Ice1
+        Me.txtCloseView.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.txtCloseView.Font = New System.Drawing.Font("Webdings", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
+        Me.txtCloseView.Location = New System.Drawing.Point(558, 3)
+        Me.txtCloseView.Name = "txtCloseView"
+        Me.txtCloseView.Size = New System.Drawing.Size(23, 25)
+        Me.txtCloseView.TabIndex = 0
+        Me.txtCloseView.Text = "r"
+        Me.txtCloseView.UseVisualStyleBackColor = False
+        '
         'mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.fvexpress.My.Resources.Resources.bg
         Me.ClientSize = New System.Drawing.Size(584, 411)
+        Me.Controls.Add(Me.panelViewFile)
         Me.Controls.Add(Me.statusMain)
         Me.Controls.Add(Me.menuMain)
         Me.Font = New System.Drawing.Font("Microsoft JhengHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.menuMain
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False
@@ -170,6 +202,8 @@ Partial Class mainForm
         Me.menuMain.PerformLayout()
         Me.statusMain.ResumeLayout(False)
         Me.statusMain.PerformLayout()
+        Me.panelViewFile.ResumeLayout(False)
+        Me.panelViewFile.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -191,4 +225,6 @@ Partial Class mainForm
     Friend WithEvents mnuitemUpdate As ToolStripMenuItem
     Friend WithEvents mnuitemSep3 As ToolStripSeparator
     Friend WithEvents mnuitemAbout As ToolStripMenuItem
+    Friend WithEvents panelViewFile As Panel
+    Friend WithEvents txtCloseView As Button
 End Class

@@ -22,6 +22,11 @@ fvexpress
   使用這個強類型資源類別的資源查閱。
 </summary>
 </member>
+<member name="P:fvexpress.My.Resources.Resources.about_logo">
+<summary>
+  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
+</member>
 <member name="P:fvexpress.My.Resources.Resources.bg">
 <summary>
   查詢類型 System.Drawing.Bitmap 的當地語系化資源。

@@ -19,3 +19,4 @@ C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpres
 C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress\bin\Debug\fvexpress.update.pdb
 C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress\bin\Debug\fvexpress.update.xml
 C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress\obj\Debug\fvexpress.optionsForm.resources
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress\obj\Debug\fvexpress.aboutForm.resources
