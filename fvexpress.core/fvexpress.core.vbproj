@@ -4,35 +4,30 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{25EFCA64-2791-4F95-9288-0F840F472B53}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <StartupObject>fvexpress.My.MyApplication</StartupObject>
-    <RootNamespace>fvexpress</RootNamespace>
-    <AssemblyName>fvexpress</AssemblyName>
+    <ProjectGuid>{FF5E22F1-8803-4228-9F8F-8141276415A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>fvexpress.core</RootNamespace>
+    <AssemblyName>fvexpress.core</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>fvexpress.xml</DocumentationFile>
+    <DocumentationFile>fvexpress.core.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>fvexpress.xml</DocumentationFile>
+    <DocumentationFile>fvexpress.core.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -47,15 +42,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>shell32_3.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,27 +57,13 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="aboutForm.Designer.vb">
-      <DependentUpon>aboutForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="aboutForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mainForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mainForm.Designer.vb">
-      <DependentUpon>mainForm.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="fvexpress.core.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -104,46 +79,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="optionsForm.Designer.vb">
-      <DependentUpon>optionsForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="optionsForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="registerForm.Designer.vb">
-      <DependentUpon>registerForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="registerForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="updateForm.Designer.vb">
-      <DependentUpon>updateForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="updateForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="aboutForm.resx">
-      <DependentUpon>aboutForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mainForm.resx">
-      <DependentUpon>mainForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="optionsForm.resx">
-      <DependentUpon>optionsForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="registerForm.resx">
-      <DependentUpon>registerForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="updateForm.resx">
-      <DependentUpon>updateForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -156,35 +98,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\fvexpress.core\fvexpress.core.vbproj">
-      <Project>{ff5e22f1-8803-4228-9f8f-8141276415a0}</Project>
-      <Name>fvexpress.core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\fvexpress.register\fvexpress.register.vbproj">
-      <Project>{499155d7-34f4-4529-be1f-a527e33105e4}</Project>
-      <Name>fvexpress.register</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\fvexpress.settings\fvexpress.settings.vbproj">
-      <Project>{da59a2cb-c5fb-4dcf-9bd4-ebbfc78ea346}</Project>
-      <Name>fvexpress.settings</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\fvexpress.update\fvexpress.update.vbproj">
-      <Project>{a9848d0e-90da-4b6c-9d3d-dd51a7e85d88}</Project>
-      <Name>fvexpress.update</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ice1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\about_logo.png" />
-    <Content Include="shell32_3.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

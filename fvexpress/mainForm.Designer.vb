@@ -40,7 +40,11 @@ Partial Class mainForm
         Me.statusMainStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.statusVersion = New System.Windows.Forms.ToolStripStatusLabel()
         Me.panelViewFile = New System.Windows.Forms.Panel()
+        Me.lblFilePath = New System.Windows.Forms.Label()
+        Me.btnBrowseFile = New System.Windows.Forms.Button()
+        Me.txtFilePath = New System.Windows.Forms.TextBox()
         Me.txtCloseView = New System.Windows.Forms.Button()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.menuMain.SuspendLayout()
         Me.statusMain.SuspendLayout()
         Me.panelViewFile.SuspendLayout()
@@ -158,6 +162,10 @@ Partial Class mainForm
         '
         Me.panelViewFile.AutoSize = True
         Me.panelViewFile.BackgroundImage = Global.fvexpress.My.Resources.Resources.Ice1
+        Me.panelViewFile.Controls.Add(Me.RichTextBox1)
+        Me.panelViewFile.Controls.Add(Me.lblFilePath)
+        Me.panelViewFile.Controls.Add(Me.btnBrowseFile)
+        Me.panelViewFile.Controls.Add(Me.txtFilePath)
         Me.panelViewFile.Controls.Add(Me.txtCloseView)
         Me.panelViewFile.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelViewFile.Location = New System.Drawing.Point(0, 24)
@@ -165,6 +173,33 @@ Partial Class mainForm
         Me.panelViewFile.Size = New System.Drawing.Size(584, 365)
         Me.panelViewFile.TabIndex = 2
         Me.panelViewFile.Visible = False
+        '
+        'lblFilePath
+        '
+        Me.lblFilePath.AutoSize = True
+        Me.lblFilePath.BackColor = System.Drawing.Color.Transparent
+        Me.lblFilePath.Location = New System.Drawing.Point(12, 20)
+        Me.lblFilePath.Name = "lblFilePath"
+        Me.lblFilePath.Size = New System.Drawing.Size(67, 15)
+        Me.lblFilePath.TabIndex = 3
+        Me.lblFilePath.Text = "檔案路徑："
+        '
+        'btnBrowseFile
+        '
+        Me.btnBrowseFile.Location = New System.Drawing.Point(455, 16)
+        Me.btnBrowseFile.Name = "btnBrowseFile"
+        Me.btnBrowseFile.Size = New System.Drawing.Size(97, 23)
+        Me.btnBrowseFile.TabIndex = 2
+        Me.btnBrowseFile.Text = "瀏覽(&B)..."
+        Me.btnBrowseFile.UseVisualStyleBackColor = True
+        '
+        'txtFilePath
+        '
+        Me.txtFilePath.Location = New System.Drawing.Point(83, 16)
+        Me.txtFilePath.Name = "txtFilePath"
+        Me.txtFilePath.ReadOnly = True
+        Me.txtFilePath.Size = New System.Drawing.Size(366, 23)
+        Me.txtFilePath.TabIndex = 1
         '
         'txtCloseView
         '
@@ -179,6 +214,16 @@ Partial Class mainForm
         Me.txtCloseView.TabIndex = 0
         Me.txtCloseView.Text = "r"
         Me.txtCloseView.UseVisualStyleBackColor = False
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(0, 45)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.RichTextBox1.Size = New System.Drawing.Size(581, 317)
+        Me.RichTextBox1.TabIndex = 4
+        Me.RichTextBox1.Text = ""
         '
         'mainForm
         '
@@ -227,4 +272,8 @@ Partial Class mainForm
     Friend WithEvents mnuitemAbout As ToolStripMenuItem
     Friend WithEvents panelViewFile As Panel
     Friend WithEvents txtCloseView As Button
+    Friend WithEvents lblFilePath As Label
+    Friend WithEvents btnBrowseFile As Button
+    Friend WithEvents txtFilePath As TextBox
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class

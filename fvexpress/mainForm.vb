@@ -2,7 +2,9 @@
 Imports fvexpress.settings.fvexpress
 Imports fvexpress.update.fvexpress
 Imports fvexpress.optionsForm
+Imports fvexpress.core.fvexpress
 Imports System.IO
+Imports System.Windows.Forms
 
 Public Class mainForm
     Public Shared ErrorMsg As String
@@ -165,6 +167,24 @@ Public Class mainForm
     End Sub
 
     Private Sub txtCloseView_MouseLeave(sender As Object, e As EventArgs) Handles txtCloseView.MouseLeave
+        statusMainStatus.Text = "就緒"
+    End Sub
+
+    Private Sub btnBrowseFile_Click(sender As Object, e As EventArgs) Handles btnBrowseFile.Click
+        Dim OpenFileBrowser As New OpenFileDialog
+        With OpenFileDialog
+            .Title = "選擇要開啟的檔案"
+            .Filter = ""
+        End With
+
+
+    End Sub
+
+    Private Sub btnBrowseFile_MouseHover(sender As Object, e As EventArgs) Handles btnBrowseFile.MouseHover
+        statusMainStatus.Text = "選擇您欲檢視的檔案路徑"
+    End Sub
+
+    Private Sub btnBrowseFile_MouseLeave(sender As Object, e As EventArgs) Handles btnBrowseFile.MouseLeave
         statusMainStatus.Text = "就緒"
     End Sub
 End Class
