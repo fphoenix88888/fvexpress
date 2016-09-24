@@ -171,11 +171,13 @@ Public Class mainForm
     End Sub
 
     Private Sub btnBrowseFile_Click(sender As Object, e As EventArgs) Handles btnBrowseFile.Click
-        Dim OpenFileBrowser As New OpenFileDialog
-        With OpenFileDialog
+        Dim OpenFileBrowser As OpenFileDialog = New OpenFileDialog()
+        With OpenFileBrowser
             .Title = "選擇要開啟的檔案"
             .Filter = ""
         End With
+
+        OpenFileBrowser.ShowDialog()
 
 
     End Sub
