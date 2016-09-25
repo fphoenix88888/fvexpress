@@ -40,11 +40,11 @@ Partial Class mainForm
         Me.statusMainStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.statusVersion = New System.Windows.Forms.ToolStripStatusLabel()
         Me.panelViewFile = New System.Windows.Forms.Panel()
+        Me.rtbViewFile = New System.Windows.Forms.RichTextBox()
         Me.lblFilePath = New System.Windows.Forms.Label()
         Me.btnBrowseFile = New System.Windows.Forms.Button()
         Me.txtFilePath = New System.Windows.Forms.TextBox()
         Me.txtCloseView = New System.Windows.Forms.Button()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.menuMain.SuspendLayout()
         Me.statusMain.SuspendLayout()
         Me.panelViewFile.SuspendLayout()
@@ -162,7 +162,7 @@ Partial Class mainForm
         '
         Me.panelViewFile.AutoSize = True
         Me.panelViewFile.BackgroundImage = Global.fvexpress.My.Resources.Resources.Ice1
-        Me.panelViewFile.Controls.Add(Me.RichTextBox1)
+        Me.panelViewFile.Controls.Add(Me.rtbViewFile)
         Me.panelViewFile.Controls.Add(Me.lblFilePath)
         Me.panelViewFile.Controls.Add(Me.btnBrowseFile)
         Me.panelViewFile.Controls.Add(Me.txtFilePath)
@@ -173,6 +173,16 @@ Partial Class mainForm
         Me.panelViewFile.Size = New System.Drawing.Size(584, 365)
         Me.panelViewFile.TabIndex = 2
         Me.panelViewFile.Visible = False
+        '
+        'rtbViewFile
+        '
+        Me.rtbViewFile.Location = New System.Drawing.Point(0, 45)
+        Me.rtbViewFile.Name = "rtbViewFile"
+        Me.rtbViewFile.ReadOnly = True
+        Me.rtbViewFile.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
+        Me.rtbViewFile.Size = New System.Drawing.Size(581, 317)
+        Me.rtbViewFile.TabIndex = 4
+        Me.rtbViewFile.Text = ""
         '
         'lblFilePath
         '
@@ -214,16 +224,6 @@ Partial Class mainForm
         Me.txtCloseView.TabIndex = 0
         Me.txtCloseView.Text = "r"
         Me.txtCloseView.UseVisualStyleBackColor = False
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(0, 45)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.RichTextBox1.Size = New System.Drawing.Size(581, 317)
-        Me.RichTextBox1.TabIndex = 4
-        Me.RichTextBox1.Text = ""
         '
         'mainForm
         '
@@ -275,5 +275,5 @@ Partial Class mainForm
     Friend WithEvents lblFilePath As Label
     Friend WithEvents btnBrowseFile As Button
     Friend WithEvents txtFilePath As TextBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents rtbViewFile As RichTextBox
 End Class

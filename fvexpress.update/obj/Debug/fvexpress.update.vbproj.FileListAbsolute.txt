@@ -1,0 +1,9 @@
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.update\bin\Debug\fvexpress.update.dll
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.update\bin\Debug\fvexpress.update.pdb
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.update\bin\Debug\fvexpress.update.xml
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.update\obj\Debug\fvexpress.update.vbprojResolveAssemblyReference.cache
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.update\obj\Debug\fvexpress.update.Resources.resources
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.update\obj\Debug\fvexpress.update.vbproj.GenerateResource.Cache
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.update\obj\Debug\fvexpress.update.dll
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.update\obj\Debug\fvexpress.update.xml
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.update\obj\Debug\fvexpress.update.pdb

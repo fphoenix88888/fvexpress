@@ -5,6 +5,7 @@ Imports fvexpress.optionsForm
 Imports fvexpress.core.fvexpress
 Imports System.IO
 Imports System.Windows.Forms
+Imports System.Text
 
 Public Class mainForm
     Public Shared ErrorMsg As String
@@ -172,13 +173,28 @@ Public Class mainForm
 
     Private Sub btnBrowseFile_Click(sender As Object, e As EventArgs) Handles btnBrowseFile.Click
         Dim OpenFileBrowser As OpenFileDialog = New OpenFileDialog()
+        Dim SelectedFile As String
         With OpenFileBrowser
             .Title = "選擇要開啟的檔案"
-            .Filter = ""
+            .Filter = "所有文字檔案 (*.txt;*.ini;*.log)|*.txt;*.ini;*.log|CSV (*.csv)|*.csv|所有HTML網頁檔案 (*.htm;*.html)|*.htm;*.html|所有檔案 (*.*)|*.*"
         End With
 
-        OpenFileBrowser.ShowDialog()
+        Try
+            If Not OpenFileBrowser.ShowDialog() = DialogResult.Cancel Then
+                SelectedFile = Path.GetFullPath(OpenFileBrowser.FileName)
 
+                txtFilePath.Text = SelectedFile
+
+                rtbViewFile.LoadFile(SelectedFile, RichTextBoxStreamType.PlainText)
+
+                Encoding.UTF8.GetBytes(rtbViewFile.Text)
+            End If
+        Catch ex As Exception
+            ErrorMsg = "Date: " + Convert.ToString(Date.Now) & vbNewLine & "Details:" & vbNewLine & ex.ToString
+            My.Computer.FileSystem.WriteAllText(Directory.GetCurrentDirectory + "\error-" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + ".log", ErrorMsg, False)
+            MessageBox.Show("在處理的過程中發生了錯誤。" + vbNewLine + "相關錯誤內容已輸出成錯誤記錄檔並放到本軟體的根目錄下。" + vbNewLine + vbNewLine + "本軟體將立即結束。", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End
+        End Try
 
     End Sub
 
