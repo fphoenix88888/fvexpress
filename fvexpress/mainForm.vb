@@ -26,6 +26,11 @@ Public Class mainForm
             If RegStatus = True Then
                 mnuitemRegisterNow.Visible = False
                 Me.Text = My.Application.Info.ProductName
+                Dim tempload As StreamReader = New StreamReader(Directory.GetCurrentDirectory + "\Config\Reg.key")
+                fvexpress.aboutForm.lblRegName.Text = Mid(tempload.ReadLine(), 8)
+                fvexpress.aboutForm.lblRegOrg.Text = Mid(tempload.ReadLine(), 7)
+                fvexpress.aboutForm.lblRegEmail.Text = Mid(tempload.ReadLine(), 9)
+                tempload.Close()
             Else
                 mnuitemRegisterNow.Visible = True
                 Me.Text = My.Application.Info.ProductName + "(未註冊版本)"
