@@ -6,3 +6,4 @@ C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpres
 C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.core\obj\Debug\fvexpress.core.dll
 C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.core\obj\Debug\fvexpress.core.xml
 C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.core\obj\Debug\fvexpress.core.pdb
+C:\Users\不死火鳳凰\Desktop\工作區\VS2015_Traditional\fvexpress\fvexpress.core\obj\Debug\fvexpress.core.vbprojResolveAssemblyReference.cache

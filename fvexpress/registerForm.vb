@@ -16,7 +16,7 @@ Public Class registerForm
         GenerateRegSerial(RegGUID)
         GenerateRegKey(RegGUID)
         GenerateActKey(RegGUID)
-        If ActKey <> "" Then My.Computer.Clipboard.SetText(ActKey)
+        If ActKey <> Nothing Then My.Computer.Clipboard.Clear() : My.Computer.Clipboard.SetText(ActKey)
         txtActCode.Enabled = True
         btnConfirm.Enabled = False
     End Sub

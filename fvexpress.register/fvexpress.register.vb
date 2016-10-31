@@ -1,6 +1,6 @@
 ﻿Public Class fvexpress
     Public Shared RegName, RegOrg, RegEmail As String
-    Public Shared RegGUID As String
+    Public Shared RegGUID As String = System.Guid.NewGuid().ToString
     Public Shared RegSerial, RegKey, ActKey As String
     Public Shared Randnum As Random = New Random()
     Public Shared NumLegend As Int64 = Nothing
@@ -9,7 +9,7 @@
     Public Shared RegStatus As Boolean
 
     Shared Function GetRegData(ByVal RegName, ByVal RegOrg, ByVal RegEmail)
-        Return RegGUID = System.Guid.NewGuid().ToString("D")
+        Return RegGUID
         Console.Write(RegGUID)
     End Function
 
@@ -84,7 +84,7 @@
     End Function
 
     Shared Sub GenerateRegKeyFile()
-        tempbufer = "RegName=" + RegName + vbNewLine + "RegOrg=" + RegOrg + vbNewLine + "RegEmail=" + RegEmail + vbNewLine + "RegSerial=" + RegSerial + vbNewLine + "RegKey=" + RegKey + vbNewLine + "ActKey=" + ActKey + vbNewLine + "GUID=" + RegGUID + vbNewLine + "RegFate=" + Date.Now.ToString("yyyy-MM-dd-HH-mm-ss")
+        tempbufer = "RegName=" + RegName + vbNewLine + "RegOrg=" + RegOrg + vbNewLine + "RegEmail=" + RegEmail + vbNewLine + "RegSerial=" + RegSerial + vbNewLine + "RegKey=" + RegKey + vbNewLine + "ActKey=" + ActKey + vbNewLine + "GUID=" + RegGUID + vbNewLine + "RegDate=" + Date.Now.ToString("yyyy-MM-dd-HH-mm-ss")
         My.Computer.FileSystem.WriteAllText(System.IO.Directory.GetCurrentDirectory() + "\Config\Reg.key", tempbufer, False)
     End Sub
 End Class
