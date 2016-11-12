@@ -33,13 +33,13 @@ Partial Class aboutForm
         Me.lblCopy = New System.Windows.Forms.Label()
         Me.lblVersion = New System.Windows.Forms.Label()
         Me.tabpageProductVersion = New System.Windows.Forms.TabPage()
-        Me.txtInfo = New System.Windows.Forms.TextBox()
         Me.tabpageLicense = New System.Windows.Forms.TabPage()
         Me.txtShowLicense = New System.Windows.Forms.TextBox()
         Me.tabpageGPL = New System.Windows.Forms.TabPage()
         Me.txtShowGPL = New System.Windows.Forms.TextBox()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.lnkDPWWebsite = New System.Windows.Forms.LinkLabel()
+        Me.txtInfo = New System.Windows.Forms.TextBox()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabAbout.SuspendLayout()
         Me.tabpageAbout.SuspendLayout()
@@ -83,7 +83,6 @@ Partial Class aboutForm
         Me.tabpageAbout.Controls.Add(Me.lblVersion)
         Me.tabpageAbout.Location = New System.Drawing.Point(4, 24)
         Me.tabpageAbout.Name = "tabpageAbout"
-        Me.tabpageAbout.Padding = New System.Windows.Forms.Padding(3)
         Me.tabpageAbout.Size = New System.Drawing.Size(391, 303)
         Me.tabpageAbout.TabIndex = 0
         Me.tabpageAbout.Text = "關於"
@@ -92,7 +91,7 @@ Partial Class aboutForm
         'lblRegEmail
         '
         Me.lblRegEmail.AutoSize = True
-        Me.lblRegEmail.Location = New System.Drawing.Point(20, 229)
+        Me.lblRegEmail.Location = New System.Drawing.Point(17, 226)
         Me.lblRegEmail.Name = "lblRegEmail"
         Me.lblRegEmail.Size = New System.Drawing.Size(69, 15)
         Me.lblRegEmail.TabIndex = 6
@@ -101,7 +100,7 @@ Partial Class aboutForm
         'lblRegOrg
         '
         Me.lblRegOrg.AutoSize = True
-        Me.lblRegOrg.Location = New System.Drawing.Point(20, 214)
+        Me.lblRegOrg.Location = New System.Drawing.Point(17, 211)
         Me.lblRegOrg.Name = "lblRegOrg"
         Me.lblRegOrg.Size = New System.Drawing.Size(60, 15)
         Me.lblRegOrg.TabIndex = 5
@@ -110,7 +109,7 @@ Partial Class aboutForm
         'lblRegName
         '
         Me.lblRegName.AutoSize = True
-        Me.lblRegName.Location = New System.Drawing.Point(20, 199)
+        Me.lblRegName.Location = New System.Drawing.Point(17, 196)
         Me.lblRegName.Name = "lblRegName"
         Me.lblRegName.Size = New System.Drawing.Size(73, 15)
         Me.lblRegName.TabIndex = 4
@@ -119,7 +118,7 @@ Partial Class aboutForm
         'lblRegInfo
         '
         Me.lblRegInfo.AutoSize = True
-        Me.lblRegInfo.Location = New System.Drawing.Point(20, 184)
+        Me.lblRegInfo.Location = New System.Drawing.Point(17, 181)
         Me.lblRegInfo.Name = "lblRegInfo"
         Me.lblRegInfo.Size = New System.Drawing.Size(163, 15)
         Me.lblRegInfo.TabIndex = 3
@@ -136,7 +135,7 @@ Partial Class aboutForm
         'lblCopy
         '
         Me.lblCopy.AutoSize = True
-        Me.lblCopy.Location = New System.Drawing.Point(20, 46)
+        Me.lblCopy.Location = New System.Drawing.Point(17, 43)
         Me.lblCopy.Name = "lblCopy"
         Me.lblCopy.Size = New System.Drawing.Size(92, 15)
         Me.lblCopy.TabIndex = 1
@@ -145,7 +144,7 @@ Partial Class aboutForm
         'lblVersion
         '
         Me.lblVersion.AutoSize = True
-        Me.lblVersion.Location = New System.Drawing.Point(20, 19)
+        Me.lblVersion.Location = New System.Drawing.Point(17, 16)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(78, 15)
         Me.lblVersion.TabIndex = 0
@@ -157,22 +156,10 @@ Partial Class aboutForm
         Me.tabpageProductVersion.Controls.Add(Me.txtInfo)
         Me.tabpageProductVersion.Location = New System.Drawing.Point(4, 24)
         Me.tabpageProductVersion.Name = "tabpageProductVersion"
-        Me.tabpageProductVersion.Padding = New System.Windows.Forms.Padding(3)
         Me.tabpageProductVersion.Size = New System.Drawing.Size(391, 303)
         Me.tabpageProductVersion.TabIndex = 1
         Me.tabpageProductVersion.Text = "產品版本"
         Me.tabpageProductVersion.UseVisualStyleBackColor = True
-        '
-        'txtInfo
-        '
-        Me.txtInfo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtInfo.Location = New System.Drawing.Point(3, 3)
-        Me.txtInfo.Multiline = True
-        Me.txtInfo.Name = "txtInfo"
-        Me.txtInfo.ReadOnly = True
-        Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(385, 297)
-        Me.txtInfo.TabIndex = 1
         '
         'tabpageLicense
         '
@@ -240,6 +227,17 @@ Partial Class aboutForm
         Me.lnkDPWWebsite.TabStop = True
         Me.lnkDPWWebsite.Text = "龍鳳之谷官方網站"
         '
+        'txtInfo
+        '
+        Me.txtInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtInfo.Location = New System.Drawing.Point(0, 0)
+        Me.txtInfo.Multiline = True
+        Me.txtInfo.Name = "txtInfo"
+        Me.txtInfo.ReadOnly = True
+        Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtInfo.Size = New System.Drawing.Size(391, 303)
+        Me.txtInfo.TabIndex = 1
+        '
         'aboutForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -291,6 +289,6 @@ Partial Class aboutForm
     Friend WithEvents lblVersion As Label
     Friend WithEvents txtShowLicense As TextBox
     Friend WithEvents txtShowGPL As TextBox
-    Friend WithEvents txtInfo As TextBox
     Friend WithEvents lnkDPWWebsite As LinkLabel
+    Friend WithEvents txtInfo As TextBox
 End Class
